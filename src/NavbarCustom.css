@@ -1,0 +1,22 @@
+.custom-nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.navbar {
+    background-color: #a48e65; 
+}
+
+.nav-link {
+    color: white; 
+}
+
+.navbar-text {
+    color: white !important;
+    font-size: 16px;
+}
+
+.custom-nav-badge {
+    font-size: 14px !important;
+    background-color: #9ca6a9 !important;
+}

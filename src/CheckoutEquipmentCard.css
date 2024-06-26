@@ -1,0 +1,51 @@
+.item-card {
+    width: 100%;
+    margin-bottom: 10px;
+    display: flex;
+    /* padding-top: 10px; */
+}
+
+.item-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-col2 {
+    max-width: 33.333%; 
+    max-height: 100%; 
+    overflow: hidden; 
+    
+}
+
+.row12 {
+    height: 100%;
+}
+
+.item-desc {
+    padding-top: 10px;
+    height: 100%;
+}
+
+.utility-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.utility-row {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.trash-icon {
+    font-size: 32px;
+    color: black;
+}
+
+.trash-icon:hover {
+    color: red;
+}

@@ -1,0 +1,65 @@
+.checkout-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+.section-title {
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+.section-subtitle {
+    padding-bottom: 20px;
+    font-size: 28px;
+}
+
+.subsection {
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.form-padding {
+    padding: 5px;
+}
+
+.col-padding {
+    padding-left: 20px;
+}
+
+.input-field {
+    width: 100%;
+}
+
+.age-input-field {
+    width: 90px;
+}
+
+.centered {
+    display: flex;
+    text-align: center;
+    justify-content: center; 
+}
+
+.footer {
+    margin-top: auto;
+}
+
+.justify-right {
+    display: flex;
+    text-align: center;
+    justify-content: right; 
+}
+
+.justify-left {
+    display: flex;
+    text-align: center;
+    justify-content: left; 
+}
+
+.checkout-button {
+    width: 200px;
+    background-color: #5790ba !important;
+}

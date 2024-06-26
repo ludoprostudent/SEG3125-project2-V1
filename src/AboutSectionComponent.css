@@ -1,0 +1,53 @@
+.about-section-container {
+  padding-top: 50px;
+  background-color: white;
+  padding-bottom: 20px;
+}
+
+.text-col1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #44758b;
+  padding-top: 20px;
+
+}
+
+.image-col1 {
+  background-color: #44758b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0;
+}
+
+.image1 {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.card-title1 {
+  margin-left: 20px;
+  padding-bottom: 10px;
+  font-size: 24px;
+}
+
+.card-content1 {
+  padding-left: 30px;
+}
+
+.customcard {
+  background-color: #44758b;
+  color: #44758b;
+  padding-bottom: 0px;
+  padding-left: 20px;
+}
+
+.div-line1 {
+  background-color: black;
+  width: 100%;
+  height: 2px;
+  margin-bottom: 1px;
+}

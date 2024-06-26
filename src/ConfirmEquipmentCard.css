@@ -1,0 +1,43 @@
+.conf-item-card {
+    width: 100%;
+    margin-bottom: 10px;
+    display: flex;
+    /* padding-top: 10px; */
+}
+
+.conf-item-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.conf-image-col2 {
+    max-width: 50%; 
+    max-height: 100%; 
+    overflow: hidden; 
+    
+}
+
+.conf-row12 {
+    height: 100%;
+}
+
+.conf-item-desc {
+    padding-top: 10px;
+    height: 100%;
+    padding-right: 100px;
+}
+
+.conf-utility-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.conf-utility-row {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,40 @@
+.home-section-container {
+    padding-top: 50px;
+    background-color: white;
+  }
+
+.home-section-row {
+  min-height: 100%;
+  background-color: #44758b;
+}
+
+  .text-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: fit-content;
+  }
+  
+  .image-col {
+    overflow: hidden;
+    min-height: max-content;
+    width: 100%;
+    padding: 0px !important;
+  }
+  
+  .image {
+    width: 100%;
+    height: 100%;
+    object-fit:fill;
+  }
+
+  .section-title654 {
+    padding-bottom: 10px;
+    padding-left: 15px;
+    color: white;
+  }
+
+  .home-component-text {
+    color: white;
+    font-size: 18px;
+  }

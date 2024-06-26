@@ -1,0 +1,42 @@
+.equipment-card213 {
+    margin-bottom: 20px;
+    height: 650px;
+    min-height: 650px;
+    max-height: 650px;
+}
+
+.card-title {
+    padding-left: 1px;
+    font-size: 24px;
+}
+
+.equipment-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.card-desc {
+    padding-bottom: 60px;
+}
+.bottom-row1 {
+    /* padding-top: 20px; */
+    padding-left: 20px;
+    position: absolute;
+    bottom: 10px;
+    width: 687px;
+    height: 50px;
+}
+
+.bottom-col {
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.card-button {
+    width: 150px;
+    position: absolute;
+    right: 20px;
+    background-color: #5790ba !important;
+}

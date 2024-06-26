@@ -1,0 +1,57 @@
+.compare-image {
+    width: 100%;
+    height:max-content;
+    object-fit: cover;
+    overflow: hidden; 
+
+}
+
+.compimgdiv {
+    overflow: hidden; 
+    height: 300px;
+    margin-top: 20px;
+}
+
+.subsection-title {
+    margin-top: 10px;
+}
+
+.subsection-title2 {
+    margin-top: 30px;
+}
+
+.boat-info {
+    font-size: 20px;
+}
+
+.buttonrow {
+    margin-bottom: 20px;
+    height: 60px;
+    padding-top: 30px;
+}
+
+.centered {
+    display: flex;
+    text-align: center;
+    justify-content: center; 
+}
+
+.comparebuttonadd {
+    width: 150px;
+    height: 40px;
+    background-color: #5790ba !important;
+}
+
+.comparebuttonadd:disabled {
+    width: 150px;
+    height: 40px;
+    background-color: #80a1ba !important;
+}
+
+.div-line {
+    border-top: 3px;
+    background-color: black;
+    width: 100%;
+    height: 2px;
+    margin-bottom: -15px;
+}
