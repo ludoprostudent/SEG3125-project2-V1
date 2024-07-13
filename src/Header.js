@@ -3,8 +3,6 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 import './Header.css';
 
-import logo from './images/logo.jpg';
-
 const Header = () => {
   return (
     <div className="header-container">

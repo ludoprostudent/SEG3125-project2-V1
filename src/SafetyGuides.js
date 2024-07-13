@@ -1,5 +1,6 @@
 import Accordion from 'react-bootstrap/Accordion';
 import { Container } from 'react-bootstrap';
+import { useTranslation } from 'react-i18next';
 
 import NavbarCustom from './NavbarCustom';
 import Footer from './Footer';
@@ -14,43 +15,40 @@ import tube_image from './images/tube_image.jpg';
 import wakeboard_image from './images/wakeboard_image.jpg';
 
 const SafetyGuides = () => {
+    const { t } = useTranslation();
 
-    const jetskiContent1 = "Wear a life jacket: Always wear a properly fitted life jacket that meets safety standards. ";
-    const jetskiContent2 = "Follow regulations: Adhere to local laws and speed limits designated for jetski operation.";
-    const jetskiContent3 = "Maintain distance: Keep a safe distance from other boats, swimmers, and obstacles.";
-    const jetskiContent4 = "Stay aware: Be vigilant of your surroundings, including currents, weather changes, and potential hazards.";
+    const jetskiContent1 = t('jetski-content1');
+    const jetskiContent2 = t('jetski-content2');
+    const jetskiContent3 = t('jetski-content3');
+    const jetskiContent4 = t('jetski-content4');
 
-    const waterskiContent1 = "Ensure proper fit: Make sure water skis and bindings fit snugly and securely.";
-    const waterskiContent2 = "Start shallow: Begin skiing in calm, shallow waters until you're comfortable with your skills.";
-    const waterskiContent3 = "Learn signals: Understand and use hand signals for communication between skier and boat driver.";
-    const waterskiContent4 = "Use a spotter: Always have a designated observer to monitor the skier's progress and safety.";
+    const waterskiContent1 = t('waterski-content1');
+    const waterskiContent2 = t('waterski-content2');
+    const waterskiContent3 = t('waterski-content3');
+    const waterskiContent4 = t('waterski-content4');
 
-    const tubeContent1 = "Check equipment: Inspect the towable for any wear, tear, or damage before use.";
-    const tubeContent2 = "Life jackets: Ensure all riders wear properly fitted life jackets and securely hold onto the towable.";
-    const tubeContent3 = "Spotter role: Designate a spotter to supervise riders and watch for any potential risks.";
-    const tubeContent4 = "Safe maneuvers: Avoid sharp turns or sudden maneuvers that could destabilize the towable.";
+    const tubeContent1 = t('tube-content1');
+    const tubeContent2 = t('tube-content2');
+    const tubeContent3 = t('tube-content3');
+    const tubeContent4 = t('tube-content4');
 
-    const wakeboardContent1 = "Protective gear: Wear suitable protective gear, including a helmet and impact vest.";
-    const wakeboardContent2 = "Balance and control: Practice maintaining balance and control on the wakeboard before attempting tricks.";
-    const wakeboardContent3 = "Communication: Establish clear signals with the boat driver for speed adjustments and course changes.";
-    const wakeboardContent4 = "Awareness: Stay alert to boat wakes, other watercraft, and any obstacles in the water.";
+    const wakeboardContent1 = t('wakeboard-content1');
+    const wakeboardContent2 = t('wakeboard-content2');
+    const wakeboardContent3 = t('wakeboard-content3');
+    const wakeboardContent4 = t('wakeboard-content4');
 
     return (
         <div className="wrapper">
             <Header />
-            <NavbarCustom
-                isHomepage={false}
-            />
+            <NavbarCustom role="navigation" isHomepage={false} />
             <Container className="safety-guide-container">
                 <div className="centered">
-                    <h1 className="section-title">Safety Guides</h1>
+                    <h1 className="section-title">{t('safety-guides-title')}</h1>
                 </div>
-                <p>Before enjoying water toys, it's crucial to prioritize safety to ensure a fun and secure experience on the water. Each water toy comes with specific guidelines designed to enhance safety and enjoyment. Familiarize yourself with these essential tips before heading out. These guidelines are essential for ensuring your safety and the safety of others while enjoying water sports. Always prioritize caution, preparedness, and awareness to make your water toy experience enjoyable and secure.
-                </p>
+                <p>{t('safety-guides-intro')}</p>
                 <Accordion>
-
                     <Accordion.Item eventKey="0">
-                        <Accordion.Header>Safety Guide for Jetski</Accordion.Header>
+                        <Accordion.Header>{t('safety-jetski-title')}</Accordion.Header>
                         <Accordion.Body>
                             <AccordionSingularComponent
                                 Content1={jetskiContent1}
@@ -60,9 +58,8 @@ const SafetyGuides = () => {
                                 Image={jetski_image} />
                         </Accordion.Body>
                     </Accordion.Item>
-
                     <Accordion.Item eventKey="1">
-                        <Accordion.Header>Safety Guide for Waterskis</Accordion.Header>
+                        <Accordion.Header>{t('safety-waterski-title')}</Accordion.Header>
                         <Accordion.Body>
                             <AccordionSingularComponent
                                 Content1={waterskiContent1}
@@ -72,9 +69,8 @@ const SafetyGuides = () => {
                                 Image={waterski_image} />
                         </Accordion.Body>
                     </Accordion.Item>
-
                     <Accordion.Item eventKey="2">
-                        <Accordion.Header>Safety Guide for Tubes & Towables</Accordion.Header>
+                        <Accordion.Header>{t('safety-tube-title')}</Accordion.Header>
                         <Accordion.Body>
                             <AccordionSingularComponent
                                 Content1={tubeContent1}
@@ -84,9 +80,8 @@ const SafetyGuides = () => {
                                 Image={tube_image} />
                         </Accordion.Body>
                     </Accordion.Item>
-
                     <Accordion.Item eventKey="3">
-                        <Accordion.Header>Safety Guide for WakeBoard</Accordion.Header>
+                        <Accordion.Header>{t('safety-wakeboard-title')}</Accordion.Header>
                         <Accordion.Body>
                             <AccordionSingularComponent
                                 Content1={wakeboardContent1}
@@ -96,15 +91,11 @@ const SafetyGuides = () => {
                                 Image={wakeboard_image} />
                         </Accordion.Body>
                     </Accordion.Item>
-
                 </Accordion>
             </Container>
-
             <Footer className="footer" />
         </div>
     );
 }
-
-
 
 export default SafetyGuides;

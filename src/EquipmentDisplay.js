@@ -1,54 +1,42 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Row, Col, Card, Form } from 'react-bootstrap';
+import { Container, Row, Col, Card, Form, Button } from 'react-bootstrap';
 import StickyBox from "react-sticky-box";
+import { useTranslation } from 'react-i18next';
 
 import EquipmentCard from './EquipmentCard';
-
 import './EquipmentDisplay.css';
+import equipmentData123 from './equipment.json';
 
 const EquipmentDisplay = () => {
-
+    const { t } = useTranslation();
     const maxCapacity = 20;
-
     const [equipment, setEquipment] = useState([]);
     const [filteredEquipment, setFilteredEquipment] = useState([]);
-
     const [categoryFilters, setCategoryFilters] = useState({});
     const [typeFilters, setTypeFilters] = useState({});
     const [capacityRange, setCapacityRange] = useState(maxCapacity);
     const [priceRange, setPriceRange] = useState({ min: '', max: '' });
 
-
-    //   get equipment data from the json file
     useEffect(() => {
-        fetch('/equipment.json')
-            .then(response => response.json())
-            .then(data => {
-                setEquipment(data);
-                setFilteredEquipment(data);
-            })
-            .catch(error => console.error('Error', error));
-    }, []);
+        setEquipment(equipmentData123);
+        setFilteredEquipment(equipmentData123);
+    }, []); 
 
     useEffect(() => {
         let filteredData = [...equipment];
 
-        // category filters
         if (Object.values(categoryFilters).some(filter => filter)) {
             filteredData = filteredData.filter(item => categoryFilters[item.category]);
         }
 
-        // type filters
         if (Object.values(typeFilters).some(filter => filter)) {
             filteredData = filteredData.filter(item => typeFilters[item.type]);
         }
 
-        // capacity range filter
         if (capacityRange !== '') {
             filteredData = filteredData.filter(item => item.capacity <= parseInt(capacityRange));
         }
 
-        // price range filter
         if (priceRange.min !== '' && priceRange.max !== '') {
             filteredData = filteredData.filter(item => item.price >= parseInt(priceRange.min) && item.price <= parseInt(priceRange.max));
         }
@@ -56,7 +44,6 @@ const EquipmentDisplay = () => {
         setFilteredEquipment(filteredData);
     }, [equipment, categoryFilters, typeFilters, capacityRange, priceRange]);
 
-    // EVENT HANDLERS
     const handleCategoryChange = (category) => {
         setCategoryFilters({
             ...categoryFilters,
@@ -73,7 +60,6 @@ const EquipmentDisplay = () => {
 
     const handlePriceChange = (e) => {
         const { name, value } = e.target;
-// value not neg check
         if (value >= 0) {
             setPriceRange({
                 ...priceRange,
@@ -82,105 +68,107 @@ const EquipmentDisplay = () => {
         }
     };
 
-    //   prevents default behavior for forms
     const handleSubmit = (e) => {
         e.preventDefault();
+    };
+
+    const resetFilters = () => {
+        setCategoryFilters({});
+        setTypeFilters({});
+        setCapacityRange(maxCapacity);
+        setPriceRange({ min: '', max: '' });
+        setFilteredEquipment(equipment);
     };
 
     return (
         <Container fluid>
             <Row>
-                {/* faceted search column */}
                 <Col sm={12} md={4} lg={3}>
                     <StickyBox offsetTop={100} offsetBottom={20}>
                         <Card>
                             <Card.Body>
                                 <Form onSubmit={handleSubmit}>
-                                    {/* category filters */}
                                     <Form.Group>
-                                        <Form.Label className="filter-title"><b>Category:</b></Form.Label>
+                                        <Form.Label className="filter-title"><b>{t('equipment-category')}</b></Form.Label>
                                         <Form.Check
                                             type="checkbox"
-                                            label="Water Toys"
+                                            label={t('equipment-water-toys')}
                                             checked={categoryFilters['water toys']}
                                             onChange={() => handleCategoryChange('water toys')}
                                         />
                                         <Form.Check
                                             type="checkbox"
-                                            label="Jet Ski"
+                                            label={t('equipment-jet-ski')}
                                             checked={categoryFilters['jet ski']}
                                             onChange={() => handleCategoryChange('jet ski')}
                                         />
                                         <Form.Check
                                             type="checkbox"
-                                            label="Boat"
+                                            label={t('equipment-boat')}
                                             checked={categoryFilters['boat']}
                                             onChange={() => handleCategoryChange('boat')}
                                         />
                                     </Form.Group>
 
-                                    {/* type filters */}
                                     <Form.Group>
-                                        <Form.Label className="filter-title"><b>Type:</b></Form.Label>
+                                        <Form.Label className="filter-title"><b>{t('equipment-type')}</b></Form.Label>
                                         <Form.Check
                                             type="checkbox"
-                                            label="Yacht"
+                                            label={t('equipment-yacht')}
                                             checked={typeFilters['yacht']}
                                             onChange={() => handleTypeChange('yacht')}
                                         />
                                         <Form.Check
                                             type="checkbox"
-                                            label="Pontoon"
+                                            label={t('equipment-pontoon')}
                                             checked={typeFilters['pontoon']}
                                             onChange={() => handleTypeChange('pontoon')}
                                         />
                                         <Form.Check
                                             type="checkbox"
-                                            label="Sailboat"
+                                            label={t('equipment-sailboat')}
                                             checked={typeFilters['sailboat']}
                                             onChange={() => handleTypeChange('sailboat')}
                                         />
                                         <Form.Check
                                             type="checkbox"
-                                            label="Fishing Boat"
+                                            label={t('equipment-fishing-boat')}
                                             checked={typeFilters['fishing boat']}
                                             onChange={() => handleTypeChange('fishing boat')}
                                         />
                                     </Form.Group>
 
-                                    {/* capacity filter */}
                                     <Form.Group>
-                                        <Form.Label className="filter-title"><b>Capacity Range:</b></Form.Label>
+                                        <Form.Label className="filter-title"><b>{t('equipment-capacity-range')}</b></Form.Label>
                                         <Form.Control
                                             type="range"
                                             min="1"
-                                            max={maxCapacity}    // TODO maybe change?
+                                            max={maxCapacity}
                                             value={capacityRange}
                                             onChange={(e) => setCapacityRange(e.target.value)}
                                             className='custom-range'
                                         />
-                                        <p className="filter-subtitle">Selected Capacity : {capacityRange}</p>
+                                        <p className="filter-subtitle">{t('equipment-selected-capacity')}: {capacityRange}</p>
                                     </Form.Group>
 
-                                    {/* price filter */}
                                     <Form.Group>
-                                        <Form.Label className="filter-title"><b>Price Range:</b></Form.Label>
+                                        <Form.Label className="filter-title"><b>{t('equipment-price-range')}</b></Form.Label>
                                         <Row>
                                             <Col>
-                                                <Form.Label className="filter-subtitle">Minimum:</Form.Label>
+                                                <Form.Label className="filter-subtitle">{t('equipment-minimum')}:</Form.Label>
                                                 <Form.Control
                                                     type="number"
-                                                    placeholder="Minimum $"
+                                                    placeholder={t('equipment-minimum-placeholder')}
                                                     name="min"
                                                     value={priceRange.min}
                                                     onChange={handlePriceChange}
                                                 />
                                             </Col>
                                             <Col>
-                                                <Form.Label className="filter-subtitle">Maximum:</Form.Label>
+                                                <Form.Label className="filter-subtitle">{t('equipment-maximum')}:</Form.Label>
                                                 <Form.Control
                                                     type="number"
-                                                    placeholder="Maximum $"
+                                                    placeholder={t('equipment-maximum-placeholder')}
                                                     name="max"
                                                     value={priceRange.max}
                                                     onChange={handlePriceChange}
@@ -190,20 +178,17 @@ const EquipmentDisplay = () => {
                                     </Form.Group>
 
                                 </Form>
+                                <Button role="button" className='custom-button38' onClick={resetFilters}><i className="bi bi-trash"></i> {t('equipment-reset-filters')}</Button>
                             </Card.Body>
                         </Card>
                     </StickyBox>
                 </Col>
 
-                {/* equipment cards column */}
                 <Col sm={12} md={8} lg={9}>
                     <Row>
                         {filteredEquipment.map(item => (
-                            // lg={6} for 2 wide or lg={4} for 3 wide
                             <Col key={item.id} lg={6} className="mb-3"> 
-                                <EquipmentCard
-                                item = {item}
-                                />
+                                <EquipmentCard item={item} />
                             </Col>
                         ))}
                     </Row>

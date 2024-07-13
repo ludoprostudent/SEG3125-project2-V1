@@ -1,37 +1,39 @@
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import { useTranslation } from 'react-i18next';
 
 import './AboutSectionComponent.css';
 
 const AboutSectionComponent = () => {
+    const { t } = useTranslation();
+
     return (
         <Container className="about-section-container" id="about-us">
             <Row>
                 <Col md={5} className="text-col1">
-                    {/* <h1 className="section-title">About Us</h1> */}
                     <div>
                         <Card className="customcard" style={{ backgroundColor: 'inherit', border: 'None' }}>
-                            <Card.Title class="card-title1" style={{color:'white'}}><b>How to Contact Us</b></Card.Title>
-                            <Card.Body class="card-content1">
-                                <p style={{color:'white'}}><i className="bi bi-telephone"></i> Phone number: (613)-333-4444</p>
-                                <p style={{color:'white'}}><i className="bi bi-envelope"></i> E-mail: info@marinaadventures.ca</p>
+                            <Card.Title className="card-title1" style={{color:'white'}}><b>{t('about-contact')}</b></Card.Title>
+                            <Card.Body className="card-content1">
+                                <p style={{color:'white'}}><i className="bi bi-telephone"></i> {t('about-phone')}: (613)-333-4444</p>
+                                <p style={{color:'white'}}><i className="bi bi-envelope"></i> {t('about-email')}: info@marinaadventures.ca</p>
                             </Card.Body>
                         </Card>
                         <hr className="div-line1" />
                         <Card className="customcard" style={{ backgroundColor: 'inherit', border: 'None' }}>
-                            <Card.Title class="card-title1" style={{color:'white'}}><b>Hours</b></Card.Title>
-                            <Card.Body class="card-content1">
-                                <p style={{color:'white'}}><i className="bi bi-clock"></i> Monday to Friday: 7AM - 9PM</p>
-                                <p style={{color:'white'}}><i className="bi bi-clock"></i> Saturday: 6AM - 11PM</p>
-                                <p style={{color:'white'}}><i className="bi bi-clock"></i> Sunday: 6AM - 11PM</p>
+                            <Card.Title className="card-title1" style={{color:'white'}}><b>{t('about-hours')}</b></Card.Title>
+                            <Card.Body className="card-content1">
+                                <p style={{color:'white'}}><i className="bi bi-clock"></i> {t('about-hours-weekdays')}: 7AM - 9PM</p>
+                                <p style={{color:'white'}}><i className="bi bi-clock"></i> {t('about-hours-saturday')}: 6AM - 11PM</p>
+                                <p style={{color:'white'}}><i className="bi bi-clock"></i> {t('about-hours-sunday')}: 6AM - 11PM</p>
                             </Card.Body>
                         </Card>
                         <hr className="div-line1" />
                         <Card className="customcard" style={{ backgroundColor: 'inherit', border: 'None' }}>
-                            <Card.Title class="card-title1" style={{color:'white'}}><b>Location</b></Card.Title>
-                            <Card.Body class="card-content1">
-                                <p style={{color:'white'}}><i className="bi bi-geo-alt"></i> 123 Lake Road Ottawa, ON</p>
+                            <Card.Title className="card-title1" style={{color:'white'}}><b>{t('about-location')}</b></Card.Title>
+                            <Card.Body className="card-content1">
+                                <p style={{color:'white'}}><i className="bi bi-geo-alt"></i> {t('about-address')}: 123 Lake Road Ottawa, ON</p>
                             </Card.Body>
                         </Card>
                     </div>

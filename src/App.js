@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 
 import Home from './Home';
 import SafetyGuides from './SafetyGuides';
@@ -17,36 +17,47 @@ import ChatComponent from './ChatComponent';
 
 function App() {
   return (
-    <BrowserRouter>
-      <div className="App">
+    <Router>
+      <div>
         <Routes>
-          <Route path="/" element={<Home />} />
-        </Routes>
-        <Routes>
-          <Route path="/#how-to-rent" element={<HomeSectionComponent />} />
-        </Routes>
-        <Routes>
-          <Route path="/#about-us" element={<AboutSectionComponent />} />
-        </Routes>
-        <Routes>
-          <Route path="/Rental" element={<Rental />} />
-        </Routes>
-        <Routes>
-          <Route path="/Checkout" element={<Checkout />} />
-        </Routes>
-        <Routes>
-          <Route path="/Compare" element={<Compare />} />
-        </Routes>
-        <Routes>
-          <Route path="/safetyguides" element={<SafetyGuides />} />
-        </Routes>
-        <Routes>
-          <Route path="/confirmation" element={<Confirmation />} />
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/#how-to-rent" element={<HomeSectionComponent />} />
+          <Route exact path="/#about-us" element={<AboutSectionComponent />} />
+          <Route exact path="/Rental" element={<Rental />} />
+          <Route exact path="/Checkout" element={<Checkout />} />
+          <Route exact path="/Compare" element={<Compare />} />
+          <Route exact path="/safetyguides" element={<SafetyGuides />} />
+          <Route exact path="/confirmation" element={<Confirmation />} />
         </Routes>
         <ChatComponent />
       </div>
-    </BrowserRouter>
+    </Router>
   );
 }
 
 export default App;
+
+/* <Routes>
+    <Route path="/" element={<Home />} />
+  </Routes>
+  <Routes>
+    <Route path="/#how-to-rent" element={<HomeSectionComponent />} />
+  </Routes>
+  <Routes>
+    <Route path="/#about-us" element={<AboutSectionComponent />} />
+  </Routes>
+  <Routes>
+    <Route path="/Rental" element={<Rental />} />
+  </Routes>
+  <Routes>
+    <Route path="/Checkout" element={<Checkout />} />
+  </Routes>
+  <Routes>
+    <Route path="/Compare" element={<Compare />} />
+  </Routes>
+  <Routes>
+    <Route path="/safetyguides" element={<SafetyGuides />} />
+  </Routes>
+  <Routes>
+    <Route path="/confirmation" element={<Confirmation />} />
+  </Routes> */

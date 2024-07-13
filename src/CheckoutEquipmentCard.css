@@ -49,3 +49,9 @@
 .trash-icon:hover {
     color: red;
 }
+
+.custom-tooltip .tooltip-inner {
+    background-color: #636262;
+    color: #fff;          
+    opacity: 0.9;
+}

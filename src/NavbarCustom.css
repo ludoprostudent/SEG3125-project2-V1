@@ -20,3 +20,13 @@
     font-size: 14px !important;
     background-color: #9ca6a9 !important;
 }
+
+.custom-tooltip .tooltip-inner {
+    background-color: #636262;
+    color: #fff;          
+    opacity: 0.9;
+}
+
+.idkgqwe {
+    width: 20px;
+  }

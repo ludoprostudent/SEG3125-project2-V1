@@ -1,9 +1,9 @@
 import ChatBot from 'react-simple-chatbot';
 import { ThemeProvider } from 'styled-components';
+import { useTranslation } from 'react-i18next';
 
 import './ChatComponent.css';
 
-// todo
 const theme = {
 	background: 'white',
 	headerBgColor: '#a48e65',
@@ -15,38 +15,33 @@ const theme = {
 	userFontColor: 'white',
 };
 
-// bot avatar can be added here
 const config = {
 	floating: true,
 };
 
 function ChatComponent() {
+	const { t } = useTranslation();
+
 	return (
 		<div className="chat-component">
 			<ThemeProvider theme={theme}>
 				<ChatBot
-
-
-					headerTitle="Help Chat"
+					headerTitle={t('chat-header')}
 					steps={[
 						{
 							id: '0',
-							message: "Hi, how can I help you today?",
-
+							message: t('chat-welcome'),
 							trigger: '1',
 						}, {
 							id: '1',
-
 							user: true,
 							trigger: '2'
 						}, {
 							id: '2',
-
-							message: "Sorry, no agents are available at the moment. Please contact us at (613)-333-4444 for guidance.",
+							message: t('chat-no-agents'),
 							trigger: '3',
 						}, {
 							id: '3',
-
 							user: true,
 							trigger: 2
 						}

@@ -1,0 +1,8 @@
+.language-button {
+    background-color: #5790ba !important;
+}
+
+.language-button-active {
+    background-color: black;
+    color: red;
+  }

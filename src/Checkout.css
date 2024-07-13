@@ -34,7 +34,7 @@
 }
 
 .age-input-field {
-    width: 90px;
+    width: 120px;
 }
 
 .centered {
@@ -62,4 +62,16 @@
 .checkout-button {
     width: 200px;
     background-color: #5790ba !important;
+}
+
+.error-message {
+    color: red;
+    margin-top: 5px;
+    font-size: 0.9em;
+}
+
+.custom-tooltip .tooltip-inner {
+    background-color: #636262;
+    color: #fff;          
+    opacity: 0.9;
 }

@@ -1,0 +1,153 @@
+[
+    {
+        "id": 1,
+        "name": "MasterCraft ProStar 197 Yacht",
+        "image": "./images/equipment/equipment1.jpg",
+        "desc": "The MasterCraft ProStar 197 is a high-performance yacht designed for precision and speed. Equipped with a powerful engine and advanced hull design, it offers exceptional handling and stability on the water. Features include adjustable wake plates, ZeroFlex Flyer tower for towing, and premium upholstery for comfort. Ideal for professional and amateur skiers alike.",
+        "price": 300,
+        "capacity": 5,
+        "type": "yacht",
+        "category": "boat"
+    },
+    {
+        "id": 2,
+        "name": "Airhead Mach Towable Tube",
+        "image": "./images/equipment/equipment2.jpg",
+        "desc": "The Airhead Mach is a thrilling towable tube designed for adrenaline-pumping rides on the water. Featuring a durable PVC bladder and nylon cover, it accommodates up to two riders with secure handles for a safe grip. Its streamlined design ensures high-speed performance and exciting maneuvers behind the boat.",
+        "price": 80,
+        "capacity": 2,
+        "type": "not boat",
+        "category": "water toys"
+    },
+    {
+        "id": 3,
+        "name": "Sea-Doo RXT-X 300 Jet Ski",
+        "image": "./images/equipment/equipment3.jpg",
+        "desc": "The Sea-Doo RXT-X 300 is a top-of-the-line personal watercraft renowned for its power and agility. Powered by a supercharged 300 hp Rotax engine, it offers exhilarating acceleration and precise handling. Features include intelligent brake and reverse system (iBR), adjustable trim tabs, and a premium sound system for entertainment on the water.",
+        "price": 250,
+        "capacity": 3,
+        "type": "not boat",
+        "category": "jet ski"
+    },
+    {
+        "id": 4,
+        "name": "Bennington R Series Pontoon Boat",
+        "image": "./images/equipment/equipment4.jpg",
+        "desc": "The Bennington R Series Pontoon is a luxurious vessel designed for leisurely cruises and entertaining on the water. It features plush seating with high-end upholstery, a built-in stereo system, and LED lighting for ambiance. Equipped with a powerful outboard engine, it combines comfort with performance, making it ideal for family outings and social gatherings.",
+        "price": 400,
+        "capacity": 10,
+        "type": "pontoon",
+        "category": "boat"
+    },
+    {
+        "id": 5,
+        "name": "Malibu Wakesetter 23 LSV Pontoon",
+        "image": "./images/equipment/equipment5.jpg",
+        "desc": "The Malibu Wakesetter 23 LSV is a premium boat crafted for exceptional wakes and smooth rides. It boasts Malibu's Integrated Surf Platform (ISP) with Power Wedge III for customizable wakes and waves. Features include a touchscreen command center, G3.5 tower with swivel board racks, and luxurious seating for up to 16 passengers. Perfect for wakeboarding enthusiasts and social gatherings on the water.",
+        "price": 450,
+        "capacity": 16,
+        "type": "pontoon",
+        "category": "boat"
+    },
+    {
+        "id": 6,
+        "name": "Tracker Targa V-19 Combo Fishing Boat",
+        "image": "./images/equipment/equipment6.jpg",
+        "desc": "The Tracker Targa V-19 Combo is a versatile fishing boat designed for both serious anglers and family outings. It features a deep-V hull for smooth handling in various water conditions and a spacious cockpit with fishing amenities. Includes a Minn Kota trolling motor, Lowrance fishfinder, live wells, and ample storage for gear. Ideal for freshwater and light offshore fishing adventures.",
+        "price": 350,
+        "capacity": 6,
+        "type": "fishing boat",
+        "category": "boat"
+    },
+    {
+        "id": 7,
+        "name": "HO Sports Formula 3 Water Skis",
+        "image": "./images/equipment/equipment7.jpg",
+        "desc": "The HO Sports Formula 3 Water Skis are high-performance skis designed for slalom skiing and recreational use. Featuring a composite construction with a V-Bottom design, they offer stability and smooth turns on the water. Equipped with adjustable bindings for a customized fit and easy maneuverability. Ideal for skiers looking to improve their skills and enjoy hours of fun on the lake.",
+        "price": 120,
+        "capacity": 1,
+        "type": "not boat",
+        "category": "water toys"
+    },
+    {
+        "id": 8,
+        "name": "Connelly Slalom Water Ski",
+        "image": "./images/equipment/equipment8.jpg",
+        "desc": "The Connelly Slalom Water Ski is designed for larger skiers seeking stability and performance. It features a wide tip and tail for effortless deep-water starts and smooth turns. Constructed with a fiberglass composite for durability and responsiveness on the water. Includes a Velcro adjustable binding system for comfort and control.",
+        "price": 150,
+        "capacity": 1,
+        "type": "not boat",
+        "category": "water toys"
+    },
+    {
+        "id": 9,
+        "name": "O'Brien Super Screamer Towable Tube",
+        "image": "./images/equipment/equipment9.jpg",
+        "desc": "The O'Brien Super Screamer is a classic towable tube offering fun for up to two riders. Designed with durable PVC construction and a nylon cover, it features six handles with EVA knuckle guards for a secure grip. Its flat design ensures stability and ease of use during exhilarating rides behind the boat.",
+        "price": 70,
+        "capacity": 2,
+        "type": "not boat",
+        "category": "water toys"
+    },
+    {
+        "id": 10,
+        "name": "Yamaha VX Deluxe Jet Ski",
+        "image": "./images/equipment/equipment10.jpg",
+        "desc": "The Yamaha VX Deluxe is a versatile personal watercraft designed for cruising and water sports. Powered by a reliable 1049 cc engine, it offers responsive acceleration and excellent fuel efficiency. Features include Yamaha's RiDE system for intuitive control, comfortable seating for up to three passengers, and extended rear platform for easy boarding and water access.",
+        "price": 230,
+        "capacity": 3,
+        "type": "not boat",
+        "category": "jet ski"
+    },
+    {
+        "id": 11,
+        "name": "Hobie Mirage Pro Angler 14 Fishing Kayak",
+        "image": "./images/equipment/equipment11.jpg",
+        "desc": "The Hobie Mirage Pro Angler 14 is an advanced fishing kayak equipped with Hobie's MirageDrive 360 pedal system for hands-free propulsion. It features a Vantage CTW seat with multiple adjustment points for all-day comfort and a Lowrance fishfinder for locating fish underwater. Includes rod holders, storage compartments, and a H-Rail mounting system for accessories.",
+        "price": 180,
+        "capacity": 1,
+        "type": "fishing boat",
+        "category": "boat"
+    },
+    {
+        "id": 12,
+        "name": "Boston Whaler 210 Montauk Sailboat",
+        "image": "./images/equipment/equipment12.jpg",
+        "desc": "The Boston Whaler 210 Montauk is a classic sailboat known for its durability and seaworthiness. It features a spacious cockpit with comfortable seating, a stainless steel steering wheel, and a T-top for shade. Equipped with a reliable outboard engine and navigation electronics, it's ideal for cruising and exploring coastal waters with family and friends.",
+        "price": 380,
+        "capacity": 5,
+        "type": "sailboat",
+        "category": "boat"
+    },
+    {
+        "id": 13,
+        "name": "Sun Tracker Party Barge 22 XP3 Pontoon Boat",
+        "image": "./images/equipment/equipment13.jpg",
+        "desc": "The Sun Tracker Party Barge 22 XP3 is a luxurious pontoon boat designed for entertaining and relaxation on the water. It features plush lounge seating with premium upholstery, a Kicker stereo system, and LED lighting for ambiance. Includes a Bimini top for shade, a swim platform with a boarding ladder, and a spacious deck area for social gatherings.",
+        "price": 420,
+        "capacity": 12,
+        "type": "pontoon",
+        "category": "boat"
+    },
+    {
+        "id": 14,
+        "name": "Sea Ray 260 Sundancer Yacht",
+        "image": "./images/equipment/equipment14.jpg",
+        "desc": "The Sea Ray 260 Sundancer is a luxurious yacht perfect for weekend getaways and coastal cruising. It features a stylish cabin with sleeping accommodations, a galley kitchen, and a private head with shower. Equipped with a powerful engine, GPS navigation system, and premium sound system. Includes a spacious cockpit with seating, a swim platform, and a sunshade.",
+        "price": 550,
+        "capacity": 6,
+        "type": "yacht",
+        "category": "boat"
+    },
+    {
+        "id": 15,
+        "name": "Tracker Pro Guide V-175 Combo Fishing Boat",
+        "image": "./images/equipment/equipment15.jpg",
+        "desc": "The Tracker Pro Guide V-175 Combo is a versatile fishing boat designed for both freshwater and light offshore fishing. It features a Deep V hull for smooth handling in rough waters and a spacious cockpit with vinyl flooring. Equipped with a Mercury outboard engine, Minn Kota trolling motor, and Lowrance fishfinder. Includes multiple rod holders, live wells, and storage compartments.",
+        "price": 320,
+        "capacity": 3,
+        "type": "fishing boat",
+        "category": "boat"
+    }
+
+]
